@@ -1,0 +1,7 @@
+var schemas = {};
+db.getCollectionNames().forEach(function (coll) {
+
+  schemas[coll] = db[coll].findOne();
+
+});
+printjson(schemas);
